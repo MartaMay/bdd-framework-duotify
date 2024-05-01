@@ -1,0 +1,27 @@
+name: GitHub Actions Demo  #name for the job
+run-name: Testing GitHub Actions # name that will be displayed
+
+
+on: #name of github event that triggers workflow ->
+  push: # pull, fork or any other event
+    branches: # branch name
+      - main
+
+jobs:  #description of the job
+  demo-job: # name it as you like
+    runs-on: ubuntu-latest # on which machine it's gonna run... lates version of lynex machine with ubuntu server
+    steps: # instal java, add dependency, etc
+      - name: Step 1. Print some message
+        run: echo "This job is automatically triggered by a push event." #command line
+      - name: Step 2. Print some message
+        run: echo "Another example of a step"
+      - name: Step 3. Check out repository code
+        uses: actions/checkout@v3
+      - name: Step 4. Print some message
+        run: echo "The repository has been cloned to the runner."
+      - name: Step 5. List files in the repository
+        run: ls
+      - name: Step 6. Print some message
+        run: echo "Job is finished."
+#      - name: Step 7. Run tests
+#        run: mvn test
