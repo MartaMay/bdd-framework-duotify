@@ -1,6 +1,6 @@
 name: Regression test Suite
 
-run-name: Running regression tests
+run-name: Running smoke tests
 
 on:
   push:
