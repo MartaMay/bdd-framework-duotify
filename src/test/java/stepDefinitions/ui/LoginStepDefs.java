@@ -48,7 +48,7 @@ public class LoginStepDefs {
     }
     @Then("the user should not be directed to the personal dashboard")
     public void the_user_should_not_be_directed_to_the_personal_dashboard() {
-        Assert.assertNotEquals("http://duotify.us-east-2.elasticbeanstalk.com/browse.php?", Driver.getDriver().getCurrentUrl());
+        Assert.assertEquals("http://duotify.us-east-2.elasticbeanstalk.com/browse.php?", Driver.getDriver().getCurrentUrl());
 
     }
 

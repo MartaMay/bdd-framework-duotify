@@ -10,12 +10,12 @@ Feature: Music Streaming App Homepage
     And the user enters valid username and password
     And the user should not be directed to the personal dashboard
 
-  @smoke
+  @smoke @regression
   Scenario: User opens the app and sees the welcome message
 
     Then the user should see the welcome message
 
-  @smoke @flaky @homepage
+  @smoke @flaky
   Scenario: Verify homepage links
 
     Then the user should see the homepage links
@@ -25,7 +25,7 @@ Feature: Music Streaming App Homepage
   Scenario: Verify homepage default albums
     Then the user should see 9 recommended albums
 
-  @albums
+  @albums @regression
   Scenario: Default albums
 
     Then the following recommended albums should be displayed
