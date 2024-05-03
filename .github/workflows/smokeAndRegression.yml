@@ -1,4 +1,4 @@
-name: Regression test Suite
+name: Smoke test Suite
 
 run-name: Running smoke tests
 
